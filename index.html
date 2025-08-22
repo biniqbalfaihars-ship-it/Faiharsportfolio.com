@@ -158,16 +158,23 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
     </div>
   </div>
 
-  <!-- Presentation -->
+  <!-- Presentation (3 Videos) -->
   <div class="card" onclick="toggleContent('presentation')">
     <span class="chip">Presentation</span>
     <div class="card-content" id="presentation">
       <p>Professional slides for business and academics.</p>
-      <img src="presentation1.png" alt="Presentation 1" onclick="openLightbox(this.src)">
-      <img src="presentation2.png" alt="Presentation 2" onclick="openLightbox(this.src)">
-      <img src="presentation3.png" alt="Presentation 3" onclick="openLightbox(this.src)">
-      <img src="presentation4.png" alt="Presentation 4" onclick="openLightbox(this.src)">
-      <img src="presentation5.png" alt="Presentation 5" onclick="openLightbox(this.src)">
+      <video width="100%" height="auto" controls>
+        <source src="presentation1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video width="100%" height="auto" controls style="margin-top:10px;">
+        <source src="presentation2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video width="100%" height="auto" controls style="margin-top:10px;">
+        <source src="presentation3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 
