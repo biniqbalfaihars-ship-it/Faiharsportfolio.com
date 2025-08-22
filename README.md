@@ -1,6 +1,5 @@
 # faiharsportfolio
 Portfolio of Faihars Bin Iqbal showcasing creative graphic design, branding, social media content, print layouts, and presentation designs. Highlighting skills and projects visually.
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
