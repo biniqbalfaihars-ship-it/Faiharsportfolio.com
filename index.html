@@ -64,6 +64,23 @@ section p{color:var(--muted);margin-bottom:14px;text-align:center;}
 .contact a:hover{text-decoration:underline;}
 footer{text-align:center;padding:25px 10px;color:var(--muted);}
 
+/* Call-to-action button */
+.contact-button{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 25px;
+  background:var(--primary);
+  color:white;
+  font-weight:600;
+  border-radius:30px;
+  text-decoration:none;
+  transition:.3s;
+}
+.contact-button:hover{
+  background:var(--primary-dark);
+  transform:translateY(-2px);
+}
+
 /* Lightbox Styles */
 #lightbox{
   position:fixed;
@@ -208,10 +225,9 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
   <li>Mockup & Product Showcase</li>
   <li>Creative Layout & Ads</li>
   <li>File Prep for Print</li>
-  <li>microsoft word</li>
-  <li>microsoft excel</li>
-  <li>microsoft powerpoint</li>
-
+  <li>Microsoft Word</li>
+  <li>Microsoft Excel</li>
+  <li>Microsoft PowerPoint</li>
 </ul>
 </section>
 
@@ -221,6 +237,8 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
 <p>Email: <a href="mailto:biniqbalfaihars@gmail.com">biniqbalfaihars@gmail.com</a></p>
 <p>Phone: <a href="tel:01889840342">01889840342</a></p>
 <p>Location: Chittagong, Bangladesh</p>
+<!-- Call-to-action button -->
+<a href="mailto:biniqbalfaihars@gmail.com" class="contact-button">Book a Free Consultation</a>
 </section>
 
 <footer>
@@ -254,6 +272,3 @@ function closeLightbox(){
 
 </body>
 </html>
-
-
-
