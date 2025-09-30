@@ -42,7 +42,7 @@ section p{color:var(--muted);margin-bottom:14px;text-align:center;}
 .skills-list{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
-  gap:10px 60px; /* row-gap, column-gap */
+  gap:10px 60px;
   list-style:none;
   padding:0;
 }
@@ -66,14 +66,16 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
 
 /* Call-to-action button */
 .contact-button{
-  display:inline-block;
-  margin-top:12px;
-  padding:12px 25px;
+  display:block;
+  margin:20px auto 0 auto;
+  padding:14px 28px;
   background:var(--primary);
   color:white;
   font-weight:600;
   border-radius:30px;
   text-decoration:none;
+  text-align:center;
+  font-size:16px;
   transition:.3s;
 }
 .contact-button:hover{
@@ -237,7 +239,7 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
 <p>Email: <a href="mailto:biniqbalfaihars@gmail.com">biniqbalfaihars@gmail.com</a></p>
 <p>Phone: <a href="tel:01889840342">01889840342</a></p>
 <p>Location: Chittagong, Bangladesh</p>
-<!-- Call-to-action button -->
+<!-- Centered Call-to-action button -->
 <a href="mailto:biniqbalfaihars@gmail.com" class="contact-button">Book a Free Consultation</a>
 </section>
 
