@@ -15,11 +15,12 @@
   --text:#ffffff; /* all text white */
   --muted:#cccccc; /* muted grey */
   --shadow:0 10px 25px rgba(0,0,0,.6); /* stronger shadow for 3D effect */
+  --button-gradient: linear-gradient(135deg,#2563eb,#1d4ed8);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
 
-header{text-align:center;padding:60px 20px 40px;background:linear-gradient(135deg, var(--primary), var(--primary-dark));color:white;border-bottom-left-radius:60px;border-bottom-right-radius:60px;box-shadow:var(--shadow);}
+header{text-align:center;padding:60px 20px 40px;background:var(--button-gradient);color:white;border-bottom-left-radius:60px;border-bottom-right-radius:60px;box-shadow:var(--shadow);}
 header img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid white;box-shadow:0 6px 20px rgba(0,0,0,.5);margin-bottom:20px;}
 header h1{font-size:34px;font-weight:700;}
 header h2{font-size:18px;font-weight:400;margin-top:6px;color:#e0f2fe;}
@@ -38,7 +39,7 @@ section p{color:var(--text);margin-bottom:14px;text-align:center;}
 .card-content img:hover{transform:scale(1.1);}
 .card-content p{margin-bottom:12px;color:var(--muted);font-size:14px;font-weight:600;}
 
-/* Skills two columns with black dots */
+/* Skills two columns with white dots */
 .skills-list{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -59,29 +60,30 @@ section p{color:var(--text);margin-bottom:14px;text-align:center;}
   color:white;
 }
 
-.contact p{margin:8px 0;font-size:15px;color:white;}
-.contact a{color:var(--primary);text-decoration:none;font-weight:600;}
+.contact p{margin:8px 0;font-size:15px;}
+.contact a{color:white;text-decoration:none;font-weight:600;}
 .contact a:hover{text-decoration:underline;}
 footer{text-align:center;padding:25px 10px;color:var(--muted);}
 
-/* Call-to-action button */
+/* Centered Gradient Button */
 .contact-button{
   display:block;
-  margin:20px auto 0 auto;
-  padding:12px 28px;
-  background:var(--primary);
-  color:white;
-  font-weight:500;
-  border-radius:20px; /* smaller pill shape */
+  margin:40px auto 0 auto;
+  padding:16px 30px;
+  background:var(--button-gradient);
+  color:#ffffff;
+  font-weight:700;
+  border-radius:20px;
   text-decoration:none;
   text-align:center;
   font-size:16px;
   transition:.3s;
-  width:220px; /* smaller width */
+  width:250px;
+  box-shadow:0 6px 20px rgba(0,0,0,.6);
 }
 .contact-button:hover{
-  background:var(--primary-dark);
-  transform:translateY(-2px);
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 12px 30px rgba(0,0,0,.8);
 }
 
 /* Lightbox Styles */
@@ -137,7 +139,6 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
 <p>Some categories I work on:</p>
 <div class="grid">
 
-  <!-- Logo Design -->
   <div class="card" onclick="toggleContent('logo')">
     <span class="chip">Logo Design</span>
     <div class="card-content" id="logo">
@@ -148,7 +149,6 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
     </div>
   </div>
 
-  <!-- Social Media -->
   <div class="card" onclick="toggleContent('social')">
     <span class="chip">Social Media</span>
     <div class="card-content" id="social">
@@ -158,7 +158,6 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
     </div>
   </div>
 
-  <!-- Print Design -->
   <div class="card" onclick="toggleContent('print')">
     <span class="chip">Print Design</span>
     <div class="card-content" id="print">
@@ -168,7 +167,6 @@ footer{text-align:center;padding:25px 10px;color:var(--muted);}
     </div>
   </div>
 
-  <!-- Presentation -->
   <div class="card" onclick="toggleContent('presentation')">
     <span class="chip">Presentation</span>
     <div class="card-content" id="presentation">
