@@ -35,74 +35,45 @@
     .card-content img{width:100px;height:auto;margin:5px;cursor:pointer;transition:0.3s;}
     .card-content img:hover{transform:scale(1.1);}
     .card-content p{margin-bottom:12px;color:var(--muted);font-size:14px;font-weight:600;}
-    /* Skills two columns with black dots */
-    .skills-list{
-      display:grid;
-      grid-template-columns:repeat(2, 1fr);
-      gap:10px 60px; /* row-gap, column-gap */
-      list-style:none;
-      padding:0;
-    }
-    .skills-list li{
-      font-weight:bold;
-      position:relative;
-      padding-left:15px;
-      margin-bottom:6px;
-    }
-    .skills-list li::before{
-      content:"•";
-      position:absolute;
-      left:0;
-      color:black;
-    }
+    .skills-list{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px 60px;list-style:none;padding:0;}
+    .skills-list li{font-weight:bold;position:relative;padding-left:15px;margin-bottom:6px;}
+    .skills-list li::before{content:"•";position:absolute;left:0;color:black;}
     .contact p{margin:8px 0;font-size:15px;}
     .contact a{color:var(--primary-dark);text-decoration:none;font-weight:600;}
     .contact a:hover{text-decoration:underline;}
     footer{text-align:center;padding:25px 10px;color:var(--muted);}
-    /* Lightbox Styles */
-    #lightbox{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.9);
-      display:none;
-      justify-content:center;
-      align-items:center;
-      z-index:9999;
+    #lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:none;justify-content:center;align-items:center;z-index:9999;}
+    #lightbox img{max-width:90%;max-height:90%;border-radius:10px;box-shadow:0 0 20px rgba(0,0,0,0.5);animation:fadeIn 0.3s ease;}
+    @keyframes fadeIn{from {opacity:0;transform:scale(0.8);} to {opacity:1;transform:scale(1);}}
+
+    /* CTA Button Style */
+    .cta-container {
+      text-align: center;
+      margin-top: 30px;
     }
-    #lightbox img{
-      max-width:90%;
-      max-height:90%;
-      border-radius:10px;
-      box-shadow:0 0 20px rgba(0,0,0,0.5);
-      animation:fadeIn 0.3s ease;
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-transform: uppercase;
+      box-shadow: var(--shadow);
     }
-    @keyframes fadeIn{
-      from {opacity:0;transform:scale(0.8);}
-      to {opacity:1;transform:scale(1);}
+    .cta-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
     }
-    /* CTA button */
-    .cta-button{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      background:var(--primary);
-      color:#fff;
-      font-weight:600;
-      padding:12px 22px;
-      border:none;
-      border-radius:30px;
-      cursor:pointer;
-      transition:.3s;
-      margin-top:15px;
+    .arrow-icon {
+      font-size: 18px;
     }
-    .cta-button:hover{
-      background:var(--primary-dark);
-      transform:translateY(-2px);
-    }
-    .arrow-icon{font-size:16px;}
   </style>
 </head>
 <body>
@@ -116,6 +87,14 @@
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <!-- CTA Button Center -->
+    <div class="cta-container">
+      <button class="cta-button">
+        BOOK A FREE CONSULTATION
+        <span class="arrow-icon">&#8599;</span>
+      </button>
+    </div>
   </header>
 
   <!-- About Me -->
@@ -168,22 +147,19 @@
           <img src="print5.png" alt="Print 5" onclick="openLightbox(this.src)">
         </div>
       </div>
-      <!-- Presentation (3 Videos) -->
+      <!-- Presentation -->
       <div class="card" onclick="toggleContent('presentation')">
         <span class="chip">Presentation</span>
         <div class="card-content" id="presentation">
           <p>Professional slides for business and academics.</p>
           <video width="100%" height="auto" controls>
             <source src="presentation1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           <video width="100%" height="auto" controls style="margin-top:10px;">
             <source src="presentation2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           <video width="100%" height="auto" controls style="margin-top:10px;">
             <source src="presentation3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
         </div>
       </div>
@@ -217,10 +193,7 @@
       <li>Mockup & Product Showcase</li>
       <li>Creative Layout & Ads</li>
       <li>File Prep for Print</li>
-      <li>microsoft word</li>
-      <li>microsoft excel</li>
-      <li>microsoft word</li>
-      <li>microsoft powerpoint</li>
+      <li>Microsoft Office Suite</li>
     </ul>
   </section>
 
@@ -230,11 +203,6 @@
     <p>Email: <a href="mailto:biniqbalfaihars@gmail.com">biniqbalfaihars@gmail.com</a></p>
     <p>Phone: <a href="tel:01889840342">01889840342</a></p>
     <p>Location: Chittagong, Bangladesh</p>
-    <!-- New CTA Button -->
-    <button class="cta-button">
-      Book a Free Consultation
-      <span class="arrow-icon">&#8599;</span>
-    </button>
   </section>
 
   <footer>
